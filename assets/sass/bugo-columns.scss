@@ -1,0 +1,25 @@
+/**
+ *
+ * Columns
+ *
+ **/
+
+@import "bugo-columns-variables";
+
+.columns {
+  @include set-margin($columns-margin-top, $columns-margin-right, $columns-margin-bottom, $columns-margin-left);
+  @include set-padding($columns-padding-top, $columns-padding-right, $columns-padding-bottom, $columns-padding-left);
+
+  display: flex;
+
+  .column {
+    flex: 1 1 0%;
+    @include set-margin($column-margin-top, $column-margin-right, $column-margin-bottom, $column-margin-left);
+    @include set-padding($column-padding-top, $column-padding-right, $column-padding-bottom, $column-padding-left);
+
+    /* IE fix */
+    .columns {
+      flex: 1 1 100%;
+    }
+  }
+}
