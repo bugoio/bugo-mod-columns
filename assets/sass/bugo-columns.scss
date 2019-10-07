@@ -4,7 +4,7 @@
  *
  **/
 
-@import "bugo-columns-variables";
+@import "bugo-columns-vars";
 
 .columns {
   @include set-margin($columns-margin-top, $columns-margin-right, $columns-margin-bottom, $columns-margin-left);
