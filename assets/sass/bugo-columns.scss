@@ -5,6 +5,8 @@
  **/
 
 @import "bugo-columns-vars";
+@debug "Loading Bugo Columns Module SASS";
+@import "custom-variables";
 
 .columns {
   @include set-margin($columns-margin-top, $columns-margin-right, $columns-margin-bottom, $columns-margin-left);
