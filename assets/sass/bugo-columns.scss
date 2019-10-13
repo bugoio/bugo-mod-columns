@@ -23,5 +23,13 @@
     .columns {
       flex: 1 1 100%;
     }
+
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 }
