@@ -11,8 +11,8 @@
 .columns {
   @include set-margin($columns-margin-top, $columns-margin-right, $columns-margin-bottom, $columns-margin-left);
   @include set-padding($columns-padding-top, $columns-padding-right, $columns-padding-bottom, $columns-padding-left);
-  // margin-right: -#{ms($column-padding-right)};
-  // margin-left: -#{ms($column-padding-left)};
+  margin-right: -#{ms($column-padding-right)};
+  margin-left: -#{ms($column-padding-left)};
 
   display: flex;
 
