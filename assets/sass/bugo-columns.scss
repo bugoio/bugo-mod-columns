@@ -17,13 +17,15 @@
   display: flex;
 
   .column {
-    flex: 1 1 0%;
+    display: block;
+    flex: 1 1;
+    flex-basis: 0%;
     @include set-margin($column-margin-top, $column-margin-right, $column-margin-bottom, $column-margin-left);
     @include set-padding($column-padding-top, $column-padding-right, $column-padding-bottom, $column-padding-left);
 
     /* IE fix */
     .columns {
-      flex: 1 1 100%;
+      flex: 0 0 100%;
     }
 
     :first-child {
