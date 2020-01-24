@@ -9,34 +9,30 @@
 @import "custom-variables";
 
 .columns {
-  @include set-margin($columns-margin-top, $columns-margin-right, $columns-margin-bottom, $columns-margin-left);
-  @include set-padding($columns-padding-top, $columns-padding-right, $columns-padding-bottom, $columns-padding-left);
-  // @include ms-respond(margin-right,$columns-padding-right);
-  // @include ms-respond(margin-left,$columns-padding-left);
+  @include ms-respond(--margin,$global-padding);
+  margin-left: calc( var(--margin) * -1);
   display: flex;
+}
 
-  .column {
-    display: block;
-    flex: 1 1;
-    flex-basis: 0%;
-    @include set-margin($column-margin-top, $column-margin-right, $column-margin-bottom, $column-margin-left);
-    @include set-padding($column-padding-top, $column-padding-right, $column-padding-bottom, $column-padding-left);
 
-    /* IE fix */
-    .columns {
-      flex: 0 0 100%;
-    }
+.column {
+  display: block;
+  position: relative;
 
-    :first-child {
-      margin-top: 0;
-    }
+  > * {
+    @include ms-respond(margin-left,$global-padding);
+    @include ms-respond(margin-right,$global-padding);
+  }
 
-    :last-child {
-      margin-bottom: 0;
-    }
+  :first-child {
+    margin-top: 0;
+  }
 
-    img {
-      max-width: 100%;
-    }
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
