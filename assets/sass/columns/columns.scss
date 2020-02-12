@@ -1,0 +1,29 @@
+.columns {
+  @include ms-respond(--margin,$global-padding);
+  margin-left: calc( var(--margin) * -1);
+  margin-right: calc( var(--margin) * -1);
+  display: flex;
+}
+
+
+.column {
+  display: block;
+  position: relative;
+
+  > * {
+    @include ms-respond(margin-left,$global-padding);
+    @include ms-respond(margin-right,$global-padding);
+  }
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
