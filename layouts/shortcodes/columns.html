@@ -1,3 +1,5 @@
-<div class="columns {{ range .Params -}}{{- . -}} {{- end }}">
-{{.Inner | markdownify }}
+<div class="columns {{ range .Params -}}{{ . }} {{ end }}">
+  <div class="container">
+    {{.Inner | markdownify }}
+  </div>
 </div>
